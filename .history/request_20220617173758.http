@@ -1,0 +1,33 @@
+
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username" : "Ly",
+  "password" : "ly1"
+}
+
+### 
+
+POST http://localhost:5000/api/auth/login
+Content-Type:  application/json
+
+{
+  "username": "Ly",
+  "password": "ly1"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json 
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFjNGE1YzM3YTVlMzMwNWM5NjJhYTIiLCJpYXQiOjE2NTU0NTg0Njd9.OnqHA2ALdZawNHL7G--vfiXXauTQoASrkzZMYbMWeco
+
+{
+  "title": "First of ly",
+  "description": "hahahahh",
+  "url": "oracle.com",
+  "status": "Learning"
+}
+
