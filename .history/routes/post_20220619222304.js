@@ -71,8 +71,8 @@ router.put('/:id', verifyToken, async (req, res) => {
 
     // User not authorised to update post
 
+    if (!)
     if (!updatedPost)
-    return res.status(401).json({success: false, message: 'post not found or user not authorised'})
     return res
       .status(401)
       .json({
