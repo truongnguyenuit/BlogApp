@@ -60,7 +60,7 @@ router.put('/:id', verifyToken, async (req, res) => {
   try {
     let updatedPost = {
       title,
-      description: description || '',
+      description: description || '',             
       url: url.startsWith('http://') ? url : `http://${url}` || '',
       status: status || 'To learn'
 
@@ -69,13 +69,12 @@ router.put('/:id', verifyToken, async (req, res) => {
 
     updatedPost = await Post.findByIdAndUpdate(
       postUpdateContidion,
-      updatedPost,
-      { new: true }
-      )
+       updatedPost, { new: true })
 
     // User not authorised to update post
 
-    if (!updatedPost)  
+    if (!updatedPost)
+    return res.status(401).json({success: false, message: 'post not found or user not authorised'})
     return res
       .status(401)
       .json({
@@ -84,7 +83,7 @@ router.put('/:id', verifyToken, async (req, res) => {
       })
 
       res.json({ success: true, message: 'excellent progress!', post: updatedPost })
-
+    
   } catch (error) {
     console.log(error)
     res.status(500).json({ success: false, message: 'Internal server error' })

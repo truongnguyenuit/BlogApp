@@ -75,7 +75,8 @@ router.put('/:id', verifyToken, async (req, res) => {
 
     // User not authorised to update post
 
-    if (!updatedPost)  
+    if (!updatedPost)
+      return res.status(401).json({ success: false, message: 'post not found or user not authorised' })
     return res
       .status(401)
       .json({
@@ -83,7 +84,7 @@ router.put('/:id', verifyToken, async (req, res) => {
         message: 'post not found of user not authorized'
       })
 
-      res.json({ success: true, message: 'excellent progress!', post: updatedPost })
+    res.json({ success: true, message: 'excellent progress!', post: updatedPost })
 
   } catch (error) {
     console.log(error)

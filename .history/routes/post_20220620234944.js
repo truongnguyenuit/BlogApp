@@ -75,7 +75,8 @@ router.put('/:id', verifyToken, async (req, res) => {
 
     // User not authorised to update post
 
-    if (!updatedPost)  
+    if (!updatedPost)
+      \
     return res
       .status(401)
       .json({
