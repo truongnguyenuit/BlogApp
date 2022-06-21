@@ -38,16 +38,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFjN
 
 ###
 
-PUT http://localhost:5000/api/posts/62b17a3c36eaaea02aa74ba1
+GET http://localhost:5000/api/posts/62b17a3c36eaaea02aa74ba1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFjNGE1YzM3YTVlMzMwNWM5NjJhYTIiLCJpYXQiOjE2NTU0NTg0Njd9.OnqHA2ALdZawNHL7G--vfiXXauTQoASrkzZMYbMWeco
 
 
 {
-  "title": "my first update",
-  "description": "vuejs",
-  "url": "vue.org",
-  "status":  "Learning"
+  "title": "my first update"
+  "description":
 }
 
 
