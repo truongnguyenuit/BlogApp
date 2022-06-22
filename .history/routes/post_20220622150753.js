@@ -103,13 +103,9 @@ router.delete('/:id', verifyToken, async(req, res) => {
     if (!deletedPost)
       return res.status(401).json({
         success: false,
-        message: 'Post not found or user not authorised'
+        message: 'Post '
       })
-
-      res.json({success: true, post:  deletedPost})
   } catch (error) {
-    console.log(error)
-    res.status(500).json({ success: false, message: 'Internal server error' })
 
   }
 })

@@ -101,15 +101,8 @@ router.delete('/:id', verifyToken, async(req, res) => {
     const deletedPost = await Post.findOneAndDelete(postDeleteCondition)
 
     if (!deletedPost)
-      return res.status(401).json({
-        success: false,
-        message: 'Post not found or user not authorised'
-      })
-
-      res.json({success: true, post:  deletedPost})
+      return 
   } catch (error) {
-    console.log(error)
-    res.status(500).json({ success: false, message: 'Internal server error' })
 
   }
 })
