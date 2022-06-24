@@ -53,6 +53,7 @@ router.post('/login', async (req, res) => {
   const { username, password } = req.body
 
   // Simple validation
+  
   if (!username || !password)
     return res
       .status(400)

@@ -9,6 +9,7 @@ const Post = require('../models/Post')
 // @access Private
 
 router.get('/', verifyToken, async (req, res) => {
+
   try {
     const posts = await Post.find({ user: req.userId }).populate('user', ['username'])
     res.json({ success: true, posts })
@@ -16,6 +17,7 @@ router.get('/', verifyToken, async (req, res) => {
     console.log(error)
     res.status(500).json({ success: false, message: 'Internal server error' })
   }
+  
 })
 
 // @route Post api/post
