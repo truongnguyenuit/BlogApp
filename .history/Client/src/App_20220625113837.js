@@ -4,7 +4,7 @@ import {
   Route,
   Navigate
 } from "react-router-dom";
-import './App.css'
+import App
 import Landing from "./components/layout/Landing";
 import Auth from "./components/views/Auth";
 

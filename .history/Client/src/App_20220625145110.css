@@ -1,0 +1,21 @@
+.landing {
+  position: relative;
+  /* background: url('./assets/landing.jpg') no-repeat center center/cover; */
+  background-image: url('./assets/landing.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  height: 100vh;
+}
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%
+}
+.landing-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  
+}

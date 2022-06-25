@@ -4,7 +4,6 @@ import {
   Route,
   Navigate
 } from "react-router-dom";
-import './App.css'
 import Landing from "./components/layout/Landing";
 import Auth from "./components/views/Auth";
 
@@ -13,9 +12,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing/>} />
-        <Route path="/login" element={<Auth authRoute={'login'} />} />
-        <Route path="/register" element={<Auth authRoute={'register'} />} />
-        <Route path="*" element={<Navigate to="/login" replace />} />
+        <Route path="/login" element={<Auth/>} />
+        <Route path="/auth" element={<Auth/>} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   );
