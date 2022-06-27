@@ -3,7 +3,6 @@ import LoginForm from '../auth/LoginForm'
 import RegisterForm from '../auth/RegisterForm'
 import './Auth.css'
 const Auth = ({ authRoute }) => {
-  
   let body 
   
   body = (

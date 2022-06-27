@@ -17,7 +17,7 @@ const RegisterForm = () => {
         <input
           type="text"
           className="passWord"
-          placeholder='Confirm password'
+          placeholder='Your password'
         />
         <button className="Register">
           Register

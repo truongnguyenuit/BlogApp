@@ -1,7 +1,9 @@
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
+import { Link } from 'react-router-dom'
 import { useState, useContext } from 'react'
 // import { AuthContext } from '../../contexts/AuthContext'
 // import AlertMessage from '../layout/AlertMessage' 
-import './LoginForm.css'
 const LoginForm = () => {
   //Context
   //const { loginUser } = useContext('')
@@ -21,23 +23,7 @@ const LoginForm = () => {
   return (
     <div className="container">
       <div className="header">
-        <input
-          type="text"
-          className="userName"
-          placeholder='Your user name'
-        />
-        <input
-          type="text"
-          className="passWord"
-          placeholder='Your password'
-        />
-        <button className="Login">
-          Login
-        </button>
-      </div>
-      <div className="bottom">
-        <span className="bottomtext">Don't have account?</span>
-        <button className="register">Register</button>
+        <input type="text" className="userName" />
       </div>
     </div>
   )

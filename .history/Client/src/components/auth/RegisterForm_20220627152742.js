@@ -14,18 +14,13 @@ const RegisterForm = () => {
           className="passWord"
           placeholder='Your password'
         />
-        <input
-          type="text"
-          className="passWord"
-          placeholder='Confirm password'
-        />
-        <button className="Register">
-          Register
+        <button className="Login">
+          Login
         </button>
       </div>
       <div className="bottom">
-        <span className="bottomtext">Already have an account?</span>
-        <button className="register">Login</button>
+        <span className="bottomtext">AS?</span>
+        <button className="register">Register</button>
       </div>
     </div>
   )

@@ -1,13 +1,13 @@
 import React from 'react'
 import LoginForm from '../auth/LoginForm'
 import RegisterForm from '../auth/RegisterForm'
-import './Auth.css'
+import 
 const Auth = ({ authRoute }) => {
-  
   let body 
   
   body = (
     <>
+      <div>this is auth form</div>
       {authRoute === 'login' && <LoginForm />}
       {authRoute === 'register' && <RegisterForm />}
     </>
