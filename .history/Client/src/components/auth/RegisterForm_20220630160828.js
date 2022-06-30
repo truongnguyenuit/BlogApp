@@ -11,8 +11,7 @@ const RegisterForm = () => {
   const { username, password, confirmPassword } = registerForm
   const onChangeRegisterForm = (event) => {
     setRegisterForm({
-      ...registerForm,
-      
+      ...registerForm
     })
   }
 

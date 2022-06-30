@@ -30,9 +30,9 @@ const AuthContextProvider = ({ children }) => {
 
   // Return provider
   return (
-    <AuthContext.Provider value={authContextData}>
+    <AuthContextProvider.Provider value={authContextData}>
       {children}
-    </AuthContext.Provider>
+    </AuthContextProvider.Provider>
   )
 }
 export default AuthContextProvider

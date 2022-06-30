@@ -23,16 +23,16 @@ const AuthContextProvider = ({ children }) => {
       if (error.response.data) return error.response.data
       else return { success: false, message: error.message }
     }
-  }
 
+  }
   // Context data
-  const authContextData = {loginUser}
+  const authContextData =  {loginUser}
 
   // Return provider
   return (
-    <AuthContext.Provider value={authContextData}>
+    <AuthContextProvider.Provider value={authContextData}>
       {children}
-    </AuthContext.Provider>
+    </AuthContextProvider.Provider>
   )
 }
 export default AuthContextProvider

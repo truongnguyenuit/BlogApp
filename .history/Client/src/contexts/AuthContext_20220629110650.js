@@ -1,11 +1,10 @@
-import { createContext, useReducer } from "react";
+import { Children, createContext, useReducer } from "react";
 import { authReducer } from "../reducers/authReducer";
 import axios from 'axios'
 
 export const AuthContext = createContext()
 
 const AuthContextProvider = ({ children }) => {
-  
   const [authState, dispatch] = useReducer(authReducer, {
     authLoading: true,
     isAuthenticated: false,
@@ -23,16 +22,16 @@ const AuthContextProvider = ({ children }) => {
       if (error.response.data) return error.response.data
       else return { success: false, message: error.message }
     }
-  }
 
+  }
   // Context data
-  const authContextData = {loginUser}
+  const authContextData =  {loginUser}
 
   // Return provider
   return (
-    <AuthContext.Provider value={authContextData}>
+    <AuthContextProvider.Provider value={authContextData}>
       {children}
-    </AuthContext.Provider>
+    </AuthContextProvider.Provider>
   )
 }
-export default AuthContextProvider
+export default Auth

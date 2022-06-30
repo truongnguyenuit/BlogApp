@@ -9,12 +9,7 @@ const RegisterForm = () => {
   })
 
   const { username, password, confirmPassword } = registerForm
-  const onChangeRegisterForm = (event) => {
-    setRegisterForm({
-      ...registerForm,
-      
-    })
-  }
+  const onChangeRegisterForm
 
   return (
     <div className="container">

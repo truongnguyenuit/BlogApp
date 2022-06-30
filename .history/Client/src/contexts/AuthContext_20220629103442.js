@@ -5,7 +5,6 @@ import axios from 'axios'
 export const AuthContext = createContext()
 
 const AuthContextProvider = ({ children }) => {
-  
   const [authState, dispatch] = useReducer(authReducer, {
     authLoading: true,
     isAuthenticated: false,
@@ -17,22 +16,10 @@ const AuthContextProvider = ({ children }) => {
     try {
       const response = await axios.post(`http://localhost:5000/api/auth/login`)
       if (response.data.success)
-        localStorage.setItem('LocalStorageTokenName', response.data.accessToken)
-      return response.data
+        localStorage.setItem()
     } catch (error) {
-      if (error.response.data) return error.response.data
-      else return { success: false, message: error.message }
+
     }
+
   }
-
-  // Context data
-  const authContextData = {loginUser}
-
-  // Return provider
-  return (
-    <AuthContext.Provider value={authContextData}>
-      {children}
-    </AuthContext.Provider>
-  )
 }
-export default AuthContextProvider

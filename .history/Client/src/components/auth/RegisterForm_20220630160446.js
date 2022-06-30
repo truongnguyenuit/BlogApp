@@ -1,21 +1,11 @@
 import React, { useState } from 'react'
 
 const RegisterForm = () => {
-
   const [registerForm, setRegisterForm] = useState({
     username: '',
     password: '',
     confirmPassword: '',
   })
-
-  const { username, password, confirmPassword } = registerForm
-  const onChangeRegisterForm = (event) => {
-    setRegisterForm({
-      ...registerForm,
-      
-    })
-  }
-
   return (
     <div className="container">
       <div className="header">
