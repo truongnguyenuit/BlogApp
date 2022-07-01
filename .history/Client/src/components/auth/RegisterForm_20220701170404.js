@@ -8,44 +8,39 @@ const RegisterForm = () => {
     confirmPassword: '',
   })
 
-  const { username, password, confirmPassword } = registerForm
-
-  const onChangeRegisterForm = event => {
-    console.log(event.target.value)
-    console.log(event.target.name)
-    console.log(registerForm)
+  let { username, password, confirmPassword } = registerForm
+  const [test, settest]  = useState('')
+  const onChangeRegisterForm = event => 
     setRegisterForm({
       ...registerForm,
-      // [event.target.name]: event.target.value
+      [event.target.name]: event.target.value
     })
+  
+
+  const register = async => {
+    console.log(test)
   }
 
-  const register = async event => {
-   
-  }
 
   return (
     <div className="container">
       <div className="header">
         <input
           type="text"
+          className="userName"
           placeholder='Your user name'
-          name='username'
-          value={username}
-          onChange={onChangeRegisterForm}
+          onChange={text => settest(text)}
         />
         <input
           type="text"
+          className="passWord"
           placeholder='Your password'
-          name='password'
-          value={password}
           onChange={onChangeRegisterForm}
         />
         <input
           type="text"
+          className="passWord"
           placeholder='Confirm password'
-          name='confirmPassword'
-          value={confirmPassword}
           onChange={onChangeRegisterForm}
         />
         <button

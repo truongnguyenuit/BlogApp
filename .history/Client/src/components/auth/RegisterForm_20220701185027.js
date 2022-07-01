@@ -12,16 +12,15 @@ const RegisterForm = () => {
 
   const onChangeRegisterForm = event => {
     console.log(event.target.value)
-    console.log(event.target.name)
-    console.log(registerForm)
-    setRegisterForm({
-      ...registerForm,
-      // [event.target.name]: event.target.value
-    })
+    console.log(event.target.)
+    // setRegisterForm({
+    //   ...registerForm,
+    //   [event.target.name]: event.target.value
+    // })
   }
 
   const register = async event => {
-   
+    console.log(event)
   }
 
   return (

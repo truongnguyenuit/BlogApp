@@ -14,10 +14,10 @@ const RegisterForm = () => {
     console.log(event.target.value)
     console.log(event.target.name)
     console.log(registerForm)
-    setRegisterForm({
-      ...registerForm,
-      // [event.target.name]: event.target.value
-    })
+    // setRegisterForm({
+    //   ...registerForm,
+    //   [event.target.name]: event.target.value
+    // })
   }
 
   const register = async event => {

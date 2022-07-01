@@ -11,17 +11,15 @@ const RegisterForm = () => {
   const { username, password, confirmPassword } = registerForm
 
   const onChangeRegisterForm = event => {
-    console.log(event.target.value)
-    console.log(event.target.name)
-    console.log(registerForm)
-    setRegisterForm({
-      ...registerForm,
-      // [event.target.name]: event.target.value
-    })
+    console
+    // setRegisterForm({
+    //   ...registerForm,
+    //   [event.target.name]: event.target.value
+    // })
   }
 
   const register = async event => {
-   
+    console.log(event)
   }
 
   return (

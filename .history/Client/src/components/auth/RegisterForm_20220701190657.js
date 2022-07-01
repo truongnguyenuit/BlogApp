@@ -16,7 +16,7 @@ const RegisterForm = () => {
     console.log(registerForm)
     setRegisterForm({
       ...registerForm,
-      // [event.target.name]: event.target.value
+      [event.target.name]: event.target.value
     })
   }
 

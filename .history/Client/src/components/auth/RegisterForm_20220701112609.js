@@ -9,19 +9,11 @@ const RegisterForm = () => {
   })
 
   const { username, password, confirmPassword } = registerForm
-
-  const onChangeRegisterForm = event => {
-    console.log(event.target.value)
-    console.log(event.target.name)
-    console.log(registerForm)
+  const onChangeRegisterForm = (event) => {
     setRegisterForm({
       ...registerForm,
-      // [event.target.name]: event.target.value
+      
     })
-  }
-
-  const register = async event => {
-   
   }
 
   return (
@@ -29,29 +21,26 @@ const RegisterForm = () => {
       <div className="header">
         <input
           type="text"
+          className="userName"
           placeholder='Your user name'
-          name='username'
           value={username}
-          onChange={onChangeRegisterForm}
+
         />
         <input
           type="text"
+          className="passWord"
           placeholder='Your password'
-          name='password'
-          value={password}
-          onChange={onChangeRegisterForm}
+          value= {password}
         />
         <input
           type="text"
+          className="passWord"
           placeholder='Confirm password'
-          name='confirmPassword'
           value={confirmPassword}
-          onChange={onChangeRegisterForm}
         />
-        <button
-          className="Register"
-          onClick={register}
-        >
+        <button 
+        className="Register"
+        onc>
           Register
         </button>
       </div>
