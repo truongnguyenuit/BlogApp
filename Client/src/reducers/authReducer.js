@@ -2,7 +2,10 @@
 
 
 export const authReducer = (state, action) => {
-  const {type, payload} = action
+  const {
+    type, 
+    payload: { isAuthenticated, user}
+  } = action
 
   switch (type) {
     case 'SET AUTH': 
@@ -12,5 +15,7 @@ export const authReducer = (state, action) => {
         isAuthenticated,
         user
       }
+    default: 
+    return state
   }
 }

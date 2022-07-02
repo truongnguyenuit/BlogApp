@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
-
+import React, { useState,useContext } from 'react'
+import { AuthContext } from '../../contexts/AuthContext'
 const RegisterForm = () => {
+  // Context
+  const { registerUser } = useContext(AuthContext)
 
   const [registerForm, setRegisterForm] = useState({
     username: '',
@@ -11,17 +13,26 @@ const RegisterForm = () => {
   const { username, password, confirmPassword } = registerForm
 
   const onChangeRegisterForm = event => {
-    console.log(event.target.value)
-    console.log(event.target.name)
-    console.log(registerForm)
     setRegisterForm({
       ...registerForm,
-      // [event.target.name]: event.target.value
+      [event.target.name]: event.target.value
     })
   }
 
   const register = async event => {
-   
+    if (password !== confirmPassword) {
+      alert('passwords do not match')
+      return
+    }
+    try {
+      const registerData = await registerUser(registerForm)
+      if(!registerData.success) {
+        alert(register.message)
+      }
+    } catch (error) {
+      console.log(error)
+    }
+    
   }
 
   return (
@@ -33,20 +44,23 @@ const RegisterForm = () => {
           name='username'
           value={username}
           onChange={onChangeRegisterForm}
+          required
         />
         <input
-          type="text"
+          type="password"
           placeholder='Your password'
           name='password'
           value={password}
           onChange={onChangeRegisterForm}
+          required
         />
         <input
-          type="text"
+          type="password"
           placeholder='Confirm password'
           name='confirmPassword'
           value={confirmPassword}
           onChange={onChangeRegisterForm}
+          required
         />
         <button
           className="Register"
