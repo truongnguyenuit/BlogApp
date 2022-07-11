@@ -34,7 +34,7 @@ const LoginForm = () => {
   }
   return (
     <div className="flex flex-col p-2">
-      <div className="flex flex-col gap-1.5 justify-items-center">
+      <div className="flex flex-col gap-1.5 just">
         <input
           className='rounded p-1'
           type="text"

@@ -34,7 +34,7 @@ const LoginForm = () => {
   }
   return (
     <div className="flex flex-col p-2">
-      <div className="flex flex-col gap-1.5 justify-items-center">
+      <div className="flex flex-col gap-1">
         <input
           className='rounded p-1'
           type="text"
@@ -44,21 +44,21 @@ const LoginForm = () => {
           onChange={onChangeLoginForm}
         />
         <input
-          className='rounded p-1'
+          className='rounded'
           type="password"
           placeholder='Your password'
           name="password"
           value={password}
           onChange={onChangeLoginForm}
         />
-        <button className="bg-sky-500 rounded p-1 w-20" onClick={login}>
+        <button className="bg-sky-500 rounded" onClick={login}>
           Login
         </button>
       </div>
       <div className="bottom">
         <span className="bottomtext">Don't have account?</span>
         <Link to='/register'>
-          <button className="bg-sky-500 rounded p-1 w-20">Register</button>
+          <button className="register">Register</button>
         </Link>
       </div>
     </div>
