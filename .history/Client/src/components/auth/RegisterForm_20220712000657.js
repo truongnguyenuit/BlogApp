@@ -42,7 +42,7 @@ const RegisterForm = () => {
         <input
           className='rounded p-1.5 text-black'
           type="text"
-          placeholder='Username'
+          placeholder='Your username'
           name='username'
           value={username}
           onChange={onChangeRegisterForm}
@@ -51,7 +51,7 @@ const RegisterForm = () => {
         <input
           className='rounded p-1.5 text-black'
           type="password"
-          placeholder='Password'
+          placeholder='Your password'
           name='password'
           value={password}
           onChange={onChangeRegisterForm}

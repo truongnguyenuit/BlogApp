@@ -40,25 +40,24 @@ const RegisterForm = () => {
     <div className="flex flex-col p-2 gap-2">
       <div className="flex flex-col gap-1.5 justify-items-center">
         <input
-          className='rounded p-1.5 text-black'
+        className='rounded p-1.5 text-black'
           type="text"
-          placeholder='Username'
+          placeholder='Your user name'
           name='username'
           value={username}
           onChange={onChangeRegisterForm}
           required
         />
         <input
-          className='rounded p-1.5 text-black'
+        className='rounded p-1.5 text-black'
           type="password"
-          placeholder='Password'
+          placeholder='Your password'
           name='password'
           value={password}
           onChange={onChangeRegisterForm}
           required
         />
         <input
-          className='rounded p-1.5 text-black'
           type="password"
           placeholder='Confirm password'
           name='confirmPassword'
@@ -67,17 +66,17 @@ const RegisterForm = () => {
           required
         />
         <button
-          className="bg-sky-500 rounded p-1 w-20 self-center"
+          className="Register"
           onClick={register}
         >
           Register
         </button>
       </div>
-      <div className="flex gap-2 justify-center">
+      <div className="bottom">
         <span className="bottomtext">Already have an account?</span>
         <Link to='/login'>
           <button
-            className="bg-sky-500 rounded p-1 w-20"
+            className="register"
           >
             Login
           </button>

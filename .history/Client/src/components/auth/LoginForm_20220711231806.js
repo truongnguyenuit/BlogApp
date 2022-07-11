@@ -38,7 +38,7 @@ const LoginForm = () => {
         <input
           className='rounded p-1.5 text-black'
           type="text"
-          placeholder='Username'
+          placeholder='Your user name'
           name="username"
           value={username}
           onChange={onChangeLoginForm}
@@ -46,7 +46,7 @@ const LoginForm = () => {
         <input
           className='rounded p-1.5 text-black'
           type="password"
-          placeholder='Password'
+          placeholder='Your password'
           name="password"
           value={password}
           onChange={onChangeLoginForm}

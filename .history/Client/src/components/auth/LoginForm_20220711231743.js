@@ -36,17 +36,17 @@ const LoginForm = () => {
     <div className="flex flex-col p-2 gap-2">
       <div className="flex flex-col gap-1.5 justify-items-center">
         <input
-          className='rounded p-1.5 text-black'
+          className='rounded p-1.5 text'
           type="text"
-          placeholder='Username'
+          placeholder='Your user name'
           name="username"
           value={username}
           onChange={onChangeLoginForm}
         />
         <input
-          className='rounded p-1.5 text-black'
+          className='rounded p-1.5'
           type="password"
-          placeholder='Password'
+          placeholder='Your password'
           name="password"
           value={password}
           onChange={onChangeLoginForm}

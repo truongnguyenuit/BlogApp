@@ -17,7 +17,7 @@ const Auth = ({ authRoute }) => {
       <div className="dark-overlay">
         <div className="landing-inner">
           <h1 className="font-bold text-3xl">Learn It</h1>
-          <h4 className="font-bold text-xl">Keep track of what you are learning</h4>
+          <h4>Keep track of what you are learning</h4>
           {body}
         </div>
       </div>
